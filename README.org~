@@ -1,0 +1,88 @@
+* WSL
+  :PROPERTIES:
+  :CUSTOM_ID: wsl
+  :END:
+
+*Daftar Isi*
+
+** Enable WSL
+   :PROPERTIES:
+   :CUSTOM_ID: enable-wsl
+   :END:
+
+*Referensi*
+
+- [[https://www.wikihow.com/Enable-the-Windows-Subsystem-for-Linux][enable
+  wsl]]
+- [[https://docs.microsoft.com/en-us/windows/wsl/install-win10][install
+  wsl]]
+- [[https://blog.netsarang.com/1884/using-the-linux-subsystem-in-windows-10/][using
+  wsl in windows 10]]
+
+** Reset Password
+   :PROPERTIES:
+   :CUSTOM_ID: reset-password
+   :END:
+
+#+BEGIN_EXAMPLE
+    $ wsl --user root
+    $ passwd 
+    atau
+    $ passwd username
+#+END_EXAMPLE
+
+*Referensi*
+
+- [[https://askubuntu.com/questions/772050/reset-the-password-in-ubuntu-linux-bash-in-windows][reset
+  WSL password]]
+
+** Mount Drive
+   :PROPERTIES:
+   :CUSTOM_ID: mount-drive
+   :END:
+
+#+BEGIN_EXAMPLE
+    sudo mount -t drvfs Y: /mnt/y
+#+END_EXAMPLE
+
+** Mount Shared Drive
+   :PROPERTIES:
+   :CUSTOM_ID: mount-shared-drive
+   :END:
+
+#+BEGIN_EXAMPLE
+    sudo mkdir /mnt/mountedshare
+    sudo mount -t drvfs '\\servername\sharename' /mnt/mountedshare
+#+END_EXAMPLE
+
+** Tampilan
+   :PROPERTIES:
+   :CUSTOM_ID: tampilan
+   :END:
+
+- [[https://medium.com/@Andreas_cmj/how-to-setup-a-nice-looking-terminal-with-wsl-in-windows-10-creators-update-2b468ed7c326][nice
+  looking]]
+- [[file:github.com/mintty/wsltty][wsltty: correct color in wsl]]
+- [[https://www.howtogeek.com/331053/how-to-mount-removable-drives-and-network-locations-in-the-windows-subsystem-for-linux/][mount
+  removable drives]]
+
+** Cek Versi WSL
+   :PROPERTIES:
+   :CUSTOM_ID: cek-versi-wsl
+   :END:
+
+Buka Powershell:
+
+#+BEGIN_EXAMPLE
+    $ wsl -l -v
+#+END_EXAMPLE
+
+** Install WSL2
+   :PROPERTIES:
+   :CUSTOM_ID: install-wsl2
+   :END:
+
+*Referensi*
+
+- [[https://docs.microsoft.com/en-us/windows/wsl/install-win10][install
+  wsl2]]
